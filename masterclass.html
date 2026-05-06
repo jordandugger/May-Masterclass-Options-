@@ -333,27 +333,25 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
 <!-- ══ TOP NAV ══ -->
 <nav class="top-nav">
   <div class="nav-logo">IFCA MC</div>
-  <button class="nav-btn active" onclick="showMain('dashboard',this)">📊 Dashboard</button>
+  <button class="nav-btn active" onclick="showMain('landing',this)">🖥 Landing Pages</button>
   <button class="nav-btn" onclick="showMain('projection',this)">🧮 Projection Calc</button>
   <button class="nav-btn" onclick="showMain('attribution',this)">🔍 Attribution</button>
-  <button class="nav-btn" onclick="showMain('landing',this)">🖥 Landing Pages</button>
-  <button class="nav-btn" onclick="showMain('copykit',this)">✍️ Copy Kit</button>
-  <div class="nav-tag">Command Center · v2.3 · Jun 2026</div>
+  <button class="nav-btn" onclick="showMain('dashboard',this)">📊 Past Results</button>
+  <button class="nav-btn" onclick="showMain('brief',this)">💡 Creative Brief</button>
+  <div class="nav-tag">Command Center · v2.4 · Jun 2026</div>
 </nav>
 
 <!-- ══ SUB NAV (landing pages) ══ -->
-<div id="lp-subnav" class="sub-nav">
-  <button class="sub-btn active" onclick="showLP('a',this)">A · Biz Op / First Clients</button>
-  <button class="sub-btn" onclick="showLP('b',this)">B · LTV · V1 Split Test A ✦</button>
-  <button class="sub-btn" onclick="showLP('b6',this)">B6 · LTV · V6 Case Study</button>
-  <button class="sub-btn" onclick="showLP('b8',this)">B8 · LTV · V8 Retention Engine</button>
-  <button class="sub-btn" onclick="showLP('c',this)">C · AI Claude Masterclass</button>
+<div id="lp-subnav" class="sub-nav visible">
+  <button class="sub-btn active" onclick="showLP('b',this)">V1 · $14,800 MRR Method™ <span style="color:rgba(184,147,86,.6);font-size:9px;margin-left:4px">✦ Split Test A</span></button>
+  <button class="sub-btn" onclick="showLP('b8',this)">V8 · Retention Revenue Engine</button>
+  <button class="sub-btn" onclick="showLP('b6',this)">V6 · Alycia $30K–$40K MRR</button>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════
-  PANEL 1: DASHBOARD
+  PANEL: DASHBOARD (Past Results)
 ══════════════════════════════════════════════════════════ -->
-<div id="panel-dashboard" class="panel active">
+<div id="panel-dashboard" class="panel">
 <div class="wrap">
 
   <!-- KPIs -->
@@ -442,10 +440,11 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
 <div class="wrap">
 
   <div class="section-title">Projection Calculator</div>
-  <div class="section-sub">Adjust any input — outputs update live · Based on IFCA historical benchmarks · All numbers editable</div>
+  <div class="section-sub">June 11 Masterclass · Jordan Dugger & Taeler Means · Targets: 600–750 regs · CPL &lt;$30 · 25%+ show · 15–25 calls · 8–12 closes · $75K–$130K revenue · 5x+ ROAS</div>
 
   <!-- Scenario presets -->
   <div class="scenario-chips">
+    <button class="s-chip" style="color:var(--orange);border-color:rgba(232,119,34,.5);background:rgba(232,119,34,.1);font-size:12px" onclick="loadScenario('jun11')">🎯 Jun 11 Control</button>
     <button class="s-chip" style="color:var(--green);border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.08)" onclick="loadScenario('best')">🏆 Best Case</button>
     <button class="s-chip" style="color:var(--yellow);border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.08)" onclick="loadScenario('mid')">🟡 Mid Case</button>
     <button class="s-chip" style="color:var(--red);border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.08)" onclick="loadScenario('worst')">🔴 Worst Case</button>
@@ -639,119 +638,21 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
 </div><!-- /panel-projection -->
 
 
+
 <!-- ══════════════════════════════════════════════════════════
-  PANEL 3: LANDING PAGES
+  PANEL: LANDING PAGES
 ══════════════════════════════════════════════════════════ -->
-<div id="panel-landing" class="panel">
+<div id="panel-landing" class="panel active">
 
-  <!-- Sub-panels -->
-  <div id="lp-a" class="sub-panel active lp-preview">
+  <!-- ── V1: $14,800 MRR Method™ — Split Test A ── -->
+  <div id="lp-b" class="sub-panel active" style="background:var(--cream)">
 
-    <section class="lp-hero-a">
-      <p class="lp-eyebrow-a">Free Live Masterclass · Online Fitness, Nutrition & Health Coaches</p>
-      <div class="lp-badge-a">📅 Join Us Live · [Date] at [Time] EST</div>
-      <h1 class="lp-h1-a">How To Sign Your<br><span class="ital">First (Or Next) 3–5</span><br><span class="acc">High-Ticket Clients</span><br>In 30 Days</h1>
-      <p class="lp-sub-a">The <strong>One-Day Masterclass Funnel™</strong> — the exact system 4,600+ coaches have used to go from grinding DMs and posting daily to <strong>consistent $10K–$50K months</strong> without a big audience or complicated tech.</p>
-      <div class="lp-meta-a">
-        <span class="lp-meta-txt"><span class="lp-meta-dot"></span>Live on Zoom · [Date]</span>
-        <span class="lp-meta-txt"><span class="lp-meta-dot"></span>90 Minutes · No Replay</span>
-        <span class="lp-meta-txt"><span class="lp-meta-dot"></span>Free · Limited Seats</span>
-      </div>
-      <a href="#" class="btn-lp-a">Save My Free Seat Now →</a>
-      <p class="lp-btn-sub">Limited spots · Seats are filling fast</p>
-    </section>
-
-    <div class="lp-proof">
-      <div class="lp-pstat"><span class="pn">4,600+</span><span class="pl">Coaches Trained</span></div>
-      <div class="lp-pstat"><span class="pn">$100M+</span><span class="pl">Client Revenue Generated</span></div>
-      <div class="lp-pstat"><span class="pn">3.5 Wks</span><span class="pl">Avg. First Client</span></div>
-      <div class="lp-pstat"><span class="pn">10.77x</span><span class="pl">Best Event ROAS</span></div>
-    </div>
-
-    <section class="lp-section-a">
-      <div class="lp-wrap">
-        <p class="tag">The Real Problem</p>
-        <h2 class="lp-sh2">You're Not Running <span>One Business.</span> You're Running Three.</h2>
-        <p class="lp-body">Right now, you're spinning three separate, exhausting plates: <strong>generating leads, nurturing those leads, and converting them into paying clients</strong> — all at the same time, with the same limited hours.</p>
-        <p class="lp-body">Cold outreach sucks. Posting every day is exhausting and unpredictable. Sales calls keep booking with people who "need to think about it." <strong>The system is broken — not you.</strong></p>
-        <ul>
-          <li><strong>Lead Generation:</strong> Post more, DM more, story more. It works until it doesn't.</li>
-          <li><strong>Lead Nurture:</strong> Content alone doesn't go deep enough. DMs don't scale.</li>
-          <li><strong>Lead Conversion:</strong> Sales calls with cold, un-nurtured leads who haven't been pre-sold.</li>
-        </ul>
-        <div class="text-center" style="margin-top:28px">
-          <p class="tag" style="margin-bottom:6px">What if there was one system</p>
-          <h2 class="lp-sh2" style="font-size:clamp(24px,3.5vw,38px)">That does all three jobs <span>simultaneously?</span></h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-section-a alt">
-      <div class="lp-wrap">
-        <p class="tag">Inside The Masterclass</p>
-        <h2 class="lp-sh2">3 <span>Secrets</span> That Change Everything</h2>
-        <div class="lp-secret"><div class="lp-snum">01</div><div><div class="lp-stitle">Why You Don't Need More Followers — You Need a Better System</div><div class="lp-sbody">Coaches with under 1,000 followers outearning coaches with 50,000. We'll show you exactly how — and why audience size is the most expensive myth in this industry.</div></div></div>
-        <div class="lp-secret"><div class="lp-snum">02</div><div><div class="lp-stitle">The One-Day Funnel That Generates, Warms, and Converts in 90 Minutes</div><div class="lp-sbody">The exact funnel architecture behind $74,909 in revenue from a single event. Build it in 2 hours, run it monthly, and make it your primary client acquisition engine.</div></div></div>
-        <div class="lp-secret"><div class="lp-snum">03</div><div><div class="lp-stitle">The Paid Amplification Method That Turns $10/Day into Booked Calls</div><div class="lp-sbody">The simple ad strategy generating $31/lead for IFCA right now — even with a tiny audience and no ad experience.</div></div></div>
-        <div class="text-center mt24"><a href="#" class="btn-lp-a">Claim Your Free Spot →</a><p class="lp-btn-sub">Live Only · No Replay · [Date] at [Time] EST</p></div>
-      </div>
-    </section>
-
-    <section class="lp-section-a">
-      <div class="lp-wrap">
-        <p class="tag">Real Coaches. Real Results.</p>
-        <h2 class="lp-sh2">Coaches Who've <span>Built This System</span></h2>
-        <div class="lp-testi"><div class="lp-tres">$74,909 From One Live Event · 10.77x ROAS</div><div class="lp-tq">"The January Rush masterclass changed everything. 726 registrants, 10.77x ROAS, a system I now run monthly. I used to think I needed viral content to get clients. I just needed the right event."</div><div class="lp-ta">— IFCA Student, Online Coaching Business</div></div>
-        <div class="lp-testi"><div class="lp-tres">$3K → $61K/Month in Under 12 Months</div><div class="lp-tq">"No audience, no ad budget, no idea. After IFCA I ran my first masterclass with 726 registrants and signed clients I never would have found through DMs."</div><div class="lp-ta">— Kacey, Online Fitness Coach</div></div>
-        <div class="lp-testi"><div class="lp-tres">First High-Ticket Client in 3.5 Weeks</div><div class="lp-tq">"Brand new — no followers, no ads, no email list. The masterclass funnel did all the heavy lifting. First client closed in week 3."</div><div class="lp-ta">— New Coach, IFCA Student 2024</div></div>
-      </div>
-    </section>
-
-    <section class="lp-section-a alt">
-      <div class="lp-wrap">
-        <p class="tag">Exclusive Live Bonuses</p>
-        <h2 class="lp-sh2">Attend Live, Walk Away <span>With These</span></h2>
-        <div class="lp-bonus-box">
-          <div class="tag">🎁 For Live Attendees Only</div>
-          <div class="lp-bi"><div class="lp-bicon">📊</div><div><div class="lp-btitle">Bonus #1: The IFCA Projection Calculator™</div><div class="lp-bdesc">Know what you'll make before spending $1 on ads. CPL, show rate, booking rate, and ROAS forecast in 5 minutes.</div></div></div>
-          <div class="lp-bi"><div class="lp-bicon">🎯</div><div><div class="lp-btitle">Bonus #2: The Client Getting Ad Script Pack</div><div class="lp-bdesc">5 proven ad scripts you can film on your phone this week — the exact hooks driving 421 registrants at $31/lead right now.</div></div></div>
-          <div class="lp-bi"><div class="lp-bicon">🔥</div><div><div class="lp-btitle">Bonus #3: Live Q&A with Jordan & Erin</div><div class="lp-bdesc">Bring your specific situation. This is where 6- and 7-figure coaches get answers to what's actually holding them back.</div></div></div>
-        </div>
-        <div class="lp-host-row">
-          <div class="lp-host"><div class="lp-hav">JD</div><div><div class="lp-hname">Jordan Dugger</div><div class="lp-htitle">Co-Founder, IFCA</div><div class="lp-hbio">Built IFCA into the longest-standing mentorship in online fitness coaching. 7+ years, 4,600+ students, $100M+ in client revenue.</div></div></div>
-          <div class="lp-host"><div class="lp-hav">ED</div><div><div class="lp-hname">Erin Dimond</div><div class="lp-htitle">Co-Founder, IFCA</div><div class="lp-hbio">Built a $500K/year coaching business before burnout forced her to build systems. Now she helps coaches sign high-ticket clients without sacrificing their life.</div></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="lp-cta-a">
-      <div class="lp-wrap" style="position:relative">
-        <p class="lp-eyebrow-a">Don't Miss This</p>
-        <h2 class="lp-sh2" style="font-size:clamp(28px,4.5vw,52px);margin-bottom:14px">Your Next 3–5 Clients Are<br><span>One System Away</span></h2>
-        <p class="lp-body" style="max-width:520px;margin:0 auto 28px">Every month without this system is another month of DMs, guesswork, and inconsistent revenue. 90 minutes. 2 hours to build. <strong>First client in 30 days.</strong></p>
-        <a href="#" class="btn-lp-a">Reserve My Free Seat →</a>
-        <p class="lp-btn-sub" style="margin-top:12px">[Date] · [Time] EST · Live on Zoom · Limited Spots</p>
-      </div>
-    </section>
-    <footer class="lp-footer">© 2026 Impact Fitness Coaching Academy · NASM · AFAA · ISSA Approved CEP<br><span style="opacity:.5">Disclaimer · Privacy Policy · Terms</span></footer>
-  </div><!-- /lp-a -->
-
-
-  <div id="lp-b" class="sub-panel" style="background:var(--cream)">
-
-    <!-- ══ HEADLINE TOGGLE BAR ══ -->
-    <div id="hl-toggle-bar" style="
-      position:sticky;top:94px;z-index:180;
-      background:rgba(14,14,12,0.97);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(184,147,86,.2);
-      padding:0 20px;
-      overflow-x:auto;
-    ">
+    <!-- HEADLINE TOGGLE BAR — sticky below both navs -->
+    <div style="position:sticky;top:94px;z-index:180;background:rgba(14,14,12,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,86,.2);padding:0 20px;overflow-x:auto;">
       <div style="display:flex;align-items:center;gap:0;min-width:max-content;height:44px;">
-        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(184,147,86,.5);text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(184,147,86,.15);margin-right:8px;flex-shrink:0;">V1 Split Test A — Headline Variants</span>
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(184,147,86,.5);text-transform:uppercase;padding-right:14px;border-right:1px solid rgba(184,147,86,.15);margin-right:8px;flex-shrink:0;">V1 Headline Variants</span>
         <button class="hl-btn active" onclick="setHeadline(0,this)">1 · $14,800 MRR <span style="color:rgba(184,147,86,.6);font-size:9px;margin-left:4px">✦ CHOSEN</span></button>
-        <button class="hl-btn" onclick="setHeadline(1,this)">2 · $146K Hidden</button>
+        <button class="hl-btn" onclick="setHeadline(1,this)">2 · $146K Hidden Revenue</button>
         <button class="hl-btn" onclick="setHeadline(2,this)">3 · New-Client Treadmill</button>
         <button class="hl-btn" onclick="setHeadline(3,this)">4 · MRR Method™</button>
         <button class="hl-btn" onclick="setHeadline(4,this)">5 · Paying You Twice</button>
@@ -763,12 +664,11 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
 
     <section class="lp-hero-b">
       <p class="lp-eyebrow-a" style="color:var(--gold-light)">Free Live Masterclass · Online Fitness, Nutrition & Health Coaches</p>
-      <div style="display:inline-block;border:1px solid rgba(184,147,86,.4);color:var(--gold-light);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:26px;">📅 Live · June 11 at 7PM EST</div>
-      <div style="display:inline-block;background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.3);border-radius:4px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);padding:4px 12px;margin-bottom:20px;">V1 · Split Test A · Benchmark (13.93% CVR Jan 2026)</div>
+      <div style="display:inline-block;border:1px solid rgba(184,147,86,.4);color:var(--gold-light);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:22px;">📅 Live · June 11 at 7PM EST</div>
       <h1 class="lp-h1-b" id="lp-b-h1">How to Add <em>$14,800/Month</em><br>Signing Just<br><em>2 Clients Per Week</em><br>— The MRR Method™</h1>
       <p class="lp-sub-b" id="lp-b-sub">The <strong>retention-first back-end system</strong> behind Vanessa's $702K year, David's $96,260 from one round of re-sign calls, and Alycia's <strong>$30K–$40K in monthly recurring revenue</strong> — without chasing a single new client.</p>
       <a href="#" class="btn-lp-b">Save My Free Seat →</a>
-      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px">Live Only · No Replay · June 11 @ 7PM EST · Hosted by Jordan Dugger & Taeler Means</p>
+      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px">Live Only · No Replay · June 11 @ 7PM EST · Jordan Dugger & Taeler Means</p>
     </section>
     <div class="lp-b-proof">
       <div class="lp-b-stat"><span class="n">$702K</span><span class="l">Vanessa's Year (2–3 Clients/Mo)</span></div>
@@ -814,7 +714,7 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
       <div class="lp-wrap">
         <div class="tag" style="color:var(--gold-light)">One Last Thing</div>
         <h2 class="lp-h2-b lt" style="font-size:clamp(26px,4.5vw,46px);margin-bottom:14px">Your Back-End Revenue Is<br><em>Already Waiting for You</em></h2>
-        <p class="lp-body-b lt" style="max-width:500px;margin:0 auto 28px">The clients who trust you most are the ones you already have. This workshop shows you how to turn that trust into $146,000+ without a single new client.</p>
+        <p class="lp-body-b lt" style="max-width:500px;margin:0 auto 28px">The clients who trust you most are the ones you already have. This masterclass shows you how to turn that trust into $146,000+ without a single new client.</p>
         <a href="#" class="btn-lp-b">Save My Free Seat — June 11 →</a>
       </div>
     </section>
@@ -822,89 +722,22 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
   </div><!-- /lp-b -->
 
 
-  <!-- ══ LP-B6: V6 — CASE STUDY LEAD ($30K–$40K MRR) ══ -->
-  <div id="lp-b6" class="sub-panel" style="background:#0d1017">
-    <section class="lp-hero-b" style="background:#0d1017;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 900px 500px at 50% -80px,rgba(232,119,34,.12) 0%,transparent 70%);pointer-events:none"></div>
-      <p class="lp-eyebrow-a" style="color:var(--gold-light);position:relative">Free Live Masterclass · Online Fitness, Nutrition & Health Coaches</p>
-      <div style="display:inline-block;border:1px solid rgba(184,147,86,.4);color:var(--gold-light);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:20px;position:relative;">📅 Live · June 11 at 7PM EST</div>
-      <div style="display:inline-block;background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.3);border-radius:4px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);padding:4px 12px;margin-bottom:22px;position:relative;">V6 · Case Study Lead · Split Test Candidate</div>
-      <h1 class="lp-h1-b" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,10vw,110px);line-height:.9;letter-spacing:1px;color:#fff;position:relative;">How Alycia Built<br><span style="color:var(--gold-light)">$30K–$40K in MRR</span><br>Without Signing<br><span style="color:var(--orange)">Another New Client</span></h1>
-      <div style="max-width:560px;margin:0 auto 28px;background:rgba(255,255,255,.04);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;text-align:left;position:relative;">
-        <p style="font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:rgba(245,240,230,.7);line-height:1.65;margin-bottom:8px">"I could not sign another client for 4–6 months and still be profitable."</p>
-        <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(245,240,230,.3);">— Alycia Israel, IFCA Student</p>
-      </div>
-      <a href="#" class="btn-lp-b" style="position:relative">Save My Free Seat →</a>
-      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px;position:relative">Live Only · No Replay · June 11 @ 7PM EST · Hosted by Jordan Dugger & Taeler Means</p>
-    </section>
-    <div class="lp-b-proof">
-      <div class="lp-b-stat"><span class="n">$30K–$40K</span><span class="l">Alycia's Monthly Recurring Revenue</span></div>
-      <div class="lp-b-stat"><span class="n">$702K</span><span class="l">Vanessa's Year (2–3 Clients/Mo)</span></div>
-      <div class="lp-b-stat"><span class="n">$96,260</span><span class="l">David — One Round of Back-Ends</span></div>
-      <div class="lp-b-stat"><span class="n">3,987+</span><span class="l">Coaches Trained</span></div>
-    </div>
-    <section class="lp-s-b dark">
-      <div class="lp-wrap">
-        <div class="tag" style="color:var(--gold-light)">Why This Matters to You</div>
-        <h2 class="lp-h2-b lt">Alycia Was Doing $20K–$30K Months.<br><em>And Losing Money.</em></h2>
-        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
-        <p class="lp-body-b lt">When Alycia plugged in the <strong>LTV Retention Method™</strong>, she didn't need more clients. She needed to keep and re-sign the ones she had. <em>Now she has $30K–$40K in predictable recurring revenue every single month.</em></p>
-        <p class="lp-body-b lt"><strong>This masterclass is the entire system. Live. Free. One night only.</strong></p>
-      </div>
-    </section>
-    <section class="lp-s-b mid">
-      <div class="lp-wrap">
-        <div class="tag">What's Inside</div>
-        <h2 class="lp-h2-b">The Exact System<br><em>Behind This Result</em></h2>
-        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
-        <ul class="lp-b-ul">
-          <li><strong>The Only 3 Ways to Build a Profitable Coaching Business</strong> — why most coaches pick the slowest, most expensive path.</li>
-          <li><strong>The LTV Retention Method™</strong> — the 5 keys to building a client community that 2–4x's your retention and converts back-ends at 40–60%.</li>
-          <li><strong>The Money Math Behind $146K</strong> — reverse-engineer your 2026 revenue goal.</li>
-          <li><strong>How to Uncover Your Hidden Back-End Revenue</strong> — the offer structure killing your retention (and the exact fix).</li>
-          <li><strong>The Re-Sign Script</strong> — the same 6-step script Alycia, David, and hundreds of IFCA coaches use on back-end calls.</li>
-        </ul>
-        <div class="text-center"><a href="#" class="btn-lp-b">Access the Free Workshop →</a></div>
-      </div>
-    </section>
-    <section class="lp-s-b">
-      <div class="lp-wrap">
-        <div class="tag">Alycia Isn't the Only One.</div>
-        <h2 class="lp-h2-b"><em>Not Even Close.</em></h2>
-        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
-        <div class="lp-testi-b"><div class="lp-tres-b">$30K–$40K MRR. No New Clients Required.</div><div class="lp-tq-b">"I was doing $20,000–$30,000 months but losing money. We implemented the LTV retention method. Now I have $30K–$40K in MRR. I could not sign another client for 4–6 months and still be profitable."</div><div class="lp-ta-b">— Alycia Israel, IFCA Student</div></div>
-        <div class="lp-testi-b"><div class="lp-tres-b">$702K Year. 2–3 Clients Per Week.</div><div class="lp-tq-b">"In 2022 my business made $702,000 and I only had to sign 2–3 clients per week. I quit my job as an accountant, went full-time in 4 weeks."</div><div class="lp-ta-b">— Vanessa Gillette, IFCA Student</div></div>
-        <div class="lp-testi-b"><div class="lp-tres-b">$96,260 From One Round of Back-End Calls.</div><div class="lp-tq-b">"I re-signed 24 current clients, went 24 of 26. $96,260 contracted from one round of calls. It's uncomfortable in the best way."</div><div class="lp-ta-b">— David Pegram, IFCA Student</div></div>
-      </div>
-    </section>
-    <section class="lp-s-b dark" style="text-align:center">
-      <div class="lp-wrap">
-        <h2 class="lp-h2-b lt" style="font-size:clamp(26px,4.5vw,46px);margin-bottom:14px">Ready to Stop Starting Over<br><em>Every Single Month?</em></h2>
-        <p class="lp-body-b lt" style="max-width:500px;margin:0 auto 28px">Alycia did it. Vanessa did it. David did it. One masterclass, one system, one live event. June 11 at 7PM EST.</p>
-        <a href="#" class="btn-lp-b">Save My Free Seat — June 11 →</a>
-      </div>
-    </section>
-    <div style="background:#0a0a0a;padding:18px 24px;text-align:center;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.15);text-transform:uppercase;">© 2026 Impact Fitness Coaching Academy · NASM · AFAA · ISSA CEP<br><span style="opacity:.5">Disclaimer · Privacy Policy · Terms</span></div>
-  </div><!-- /lp-b6 -->
-
-
-  <!-- ══ LP-B8: V8 — RETENTION REVENUE ENGINE ══ -->
+  <!-- ── V8: Retention Revenue Engine ── -->
   <div id="lp-b8" class="sub-panel" style="background:#08090d">
     <section class="lp-hero-b" style="background:#08090d;position:relative;overflow:hidden;">
       <div style="position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:1200px;height:700px;background:radial-gradient(ellipse at 50% 30%,rgba(99,179,237,.1) 0%,transparent 60%);pointer-events:none"></div>
       <p class="lp-eyebrow-a" style="color:#63B3ED;position:relative">Free Live Masterclass · Online Fitness, Nutrition & Health Coaches</p>
-      <div style="display:inline-block;border:1px solid rgba(99,179,237,.4);color:#63B3ED;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:20px;position:relative;">📅 Live · June 11 at 7PM EST</div>
-      <div style="display:inline-block;background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.3);border-radius:4px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#63B3ED;padding:4px 12px;margin-bottom:22px;position:relative;">V8 · Momentum Angle · Split Test Candidate</div>
-      <h1 class="lp-h1-b" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,9vw,100px);line-height:.9;letter-spacing:1px;color:#fff;position:relative;">The Retention<br><span style="color:#63B3ED"><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:.88em">Revenue Engine:</span></span><br>How Coaches Are Building<br><span style="color:#63B3ED">$10K–$40K in MRR</span><br>From Existing Clients</h1>
-      <p class="lp-sub-b" style="color:rgba(232,236,244,.6);position:relative">Forget finding new clients. The coaches growing fastest right now have one thing in common: a <strong style="color:rgba(232,236,244,.9)">retention-first back-end system</strong> that turns client relationships into recurring income. We're teaching it live June 11.</p>
+      <div style="display:inline-block;border:1px solid rgba(99,179,237,.4);color:#63B3ED;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:22px;position:relative;">📅 Live · June 11 at 7PM EST</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,9vw,100px);line-height:.9;letter-spacing:1px;color:#fff;margin-bottom:18px;position:relative;">The Retention<br><span style="color:#63B3ED"><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:.88em">Revenue Engine:</span></span><br>How Coaches Are Building<br><span style="color:#63B3ED">$10K–$40K in MRR</span><br>From Existing Clients</h1>
+      <p class="lp-sub-b" style="color:rgba(232,236,244,.6);position:relative">Forget finding new clients. The coaches growing fastest right now have one thing in common: a <strong style="color:rgba(232,236,244,.9)">retention-first back-end system</strong> that turns client relationships into recurring income. Teaching it live June 11.</p>
       <div style="background:rgba(255,255,255,.04);border:1px solid rgba(99,179,237,.15);border-radius:8px;max-width:700px;margin:0 auto 32px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:20px 24px;position:relative;">
-        <div><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$702K</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Vanessa's Year</span></div>
-        <div><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$96,260</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">David — 1 Round</span></div>
-        <div><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$40K MRR</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Alycia — No New Clients</span></div>
-        <div><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">40–60%</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Back-End Close Rate</span></div>
+        <div style="text-align:center"><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$702K</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Vanessa's Year</span></div>
+        <div style="text-align:center"><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$96,260</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">David — 1 Round</span></div>
+        <div style="text-align:center"><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">$40K MRR</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Alycia — No New Clients</span></div>
+        <div style="text-align:center"><span style="display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:#63B3ED;line-height:1">40–60%</span><span style="display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,236,244,.28);margin-top:3px">Back-End Close Rate</span></div>
       </div>
       <a href="#" class="btn-lp-b" style="position:relative">Save My Free Seat →</a>
-      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px;position:relative">Live Only · No Replay · June 11 @ 7PM EST · Hosted by Jordan Dugger & Taeler Means</p>
+      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px;position:relative">Live Only · No Replay · June 11 @ 7PM EST · Jordan Dugger & Taeler Means</p>
     </section>
     <div class="lp-b-proof">
       <div class="lp-b-stat"><span class="n">$702K</span><span class="l">Vanessa's Year (2–3 Clients/Mo)</span></div>
@@ -917,7 +750,7 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
         <div class="tag" style="color:var(--gold-light)">The Shift Happening Right Now</div>
         <h2 class="lp-h2-b lt">The Coaches Winning in 2026<br><em>Stopped Chasing New Leads.</em></h2>
         <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
-        <p class="lp-body-b lt">A 5% increase in client retention increases profits by <strong>25–95%</strong> (Bain & Co). Back-end clients convert at <strong>50–70%+</strong> vs. 20–40% for new prospects.</p>
+        <p class="lp-body-b lt">A 5% increase in client retention increases profits by <strong>25–95%</strong> (Bain & Co). Back-end clients convert at <strong>50–70%+</strong> vs. 20–40% for new prospects. The coaches scaling right now have a back-end that works while they sleep.</p>
         <p class="lp-body-b lt"><strong>This masterclass is the entire Retention Revenue Engine system. One night. Live. Free.</strong></p>
       </div>
     </section>
@@ -930,7 +763,7 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
           <li><strong>The 3-Path Framework</strong> — the only three ways to grow a coaching business, and the one 95% of coaches ignore (it's the most profitable).</li>
           <li><strong>The 5-Step Community Funnel™</strong> — 2–4x retention and the recurring revenue base your business needs to scale.</li>
           <li><strong>The Back-End Conversion System</strong> — convert existing clients at 40–60% using a re-sign process that feels like a service, not a pitch.</li>
-          <li><strong>The Revenue Unlock Map</strong> — the "Money Math" framework that shows exactly how many clients you need at what price to hit your 2026 number.</li>
+          <li><strong>The Revenue Unlock Map</strong> — the "Money Math" showing exactly how many clients you need to hit your 2026 number.</li>
           <li><strong>The Re-Sign Script</strong> — the 6-step process David used to go 24-for-26 and contract $96,260 in one round.</li>
         </ul>
         <div class="text-center"><a href="#" class="btn-lp-b">Access the Free Workshop →</a></div>
@@ -957,56 +790,69 @@ input[type=range]{width:100%;accent-color:var(--orange);cursor:pointer;height:4p
   </div><!-- /lp-b8 -->
 
 
-  <div id="lp-c" class="sub-panel lp-page-c">
-    <section class="lp-hero-c">
-      <p class="lp-eyebrow-a" style="color:#63B3ED">Free Live Masterclass · Online Health, Fitness & Nutrition Coaches</p>
-      <div class="lp-badge-c"><span class="c-dot"></span>Live Event · [Date] at [Time] EST</div>
-      <h1 class="lp-h1-c">The <span class="cb">AI Masterclass</span><br><span class="co">Funnel™:</span> How to Use<br>Claude to Build a<br><span class="cb">Client-Getting Machine</span></h1>
-      <p class="lp-sub-c">How our coaches are using <strong>AI + simple paid amplification</strong> to generate millions of views, fill their DMs with qualified leads, and sign <strong>5–10 high-paying clients per month</strong> — without becoming full-time content creators.</p>
-      <div class="lp-meta-a" style="justify-content:center">
-        <span class="lp-meta-txt" style="color:rgba(232,236,240,.38)"><span style="width:6px;height:6px;border-radius:50%;background:#63B3ED;display:inline-block;margin-right:8px"></span>Live on Zoom</span>
-        <span class="lp-meta-txt" style="color:rgba(232,236,240,.38)"><span style="width:6px;height:6px;border-radius:50%;background:#63B3ED;display:inline-block;margin-right:8px"></span>90 Minutes</span>
-        <span class="lp-meta-txt" style="color:rgba(232,236,240,.38)"><span style="width:6px;height:6px;border-radius:50%;background:#63B3ED;display:inline-block;margin-right:8px"></span>Free · Limited</span>
+  <!-- ── V6: Alycia — $30K–$40K MRR Case Study ── -->
+  <div id="lp-b6" class="sub-panel" style="background:#0d1017">
+    <section class="lp-hero-b" style="background:#0d1017;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 900px 500px at 50% -80px,rgba(232,119,34,.12) 0%,transparent 70%);pointer-events:none"></div>
+      <p class="lp-eyebrow-a" style="color:var(--gold-light);position:relative">Free Live Masterclass · Online Fitness, Nutrition & Health Coaches</p>
+      <div style="display:inline-block;border:1px solid rgba(184,147,86,.4);color:var(--gold-light);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:24px;margin-bottom:22px;position:relative;">📅 Live · June 11 at 7PM EST</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,10vw,110px);line-height:.9;letter-spacing:1px;color:#fff;margin-bottom:22px;position:relative;">How Alycia Built<br><span style="color:var(--gold-light)">$30K–$40K in MRR</span><br>Without Signing<br><span style="color:var(--orange)">Another New Client</span></h1>
+      <div style="max-width:560px;margin:0 auto 28px;background:rgba(255,255,255,.04);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;text-align:left;position:relative;">
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:rgba(245,240,230,.7);line-height:1.65;margin-bottom:8px">"I could not sign another client for 4–6 months and still be profitable."</p>
+        <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(245,240,230,.3);">— Alycia Israel, IFCA Student</p>
       </div>
-      <a href="#" class="btn-lp-c">Claim My Free Seat →</a>
-      <p class="lp-btn-sub" style="color:rgba(232,236,240,.22)">AI-era coaches only · Seats limited</p>
+      <a href="#" class="btn-lp-b" style="position:relative">Save My Free Seat →</a>
+      <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(245,240,230,.22);text-transform:uppercase;margin-top:12px;position:relative">Live Only · No Replay · June 11 @ 7PM EST · Jordan Dugger & Taeler Means</p>
     </section>
-    <div class="lp-c-proof">
-      <div class="lp-c-stat"><span class="n">Millions</span><span class="l">Views Generated</span></div>
-      <div class="lp-c-stat"><span class="n">$31/Lead</span><span class="l">Avg CPL (LTV Webinar 2026)</span></div>
-      <div class="lp-c-stat"><span class="n">781</span><span class="l">Max Regs — One Event</span></div>
-      <div class="lp-c-stat"><span class="n">14.61%</span><span class="l">Sept 2025 LP CVR</span></div>
+    <div class="lp-b-proof">
+      <div class="lp-b-stat"><span class="n">$30K–$40K</span><span class="l">Alycia's Monthly Recurring Revenue</span></div>
+      <div class="lp-b-stat"><span class="n">$702K</span><span class="l">Vanessa's Year (2–3 Clients/Mo)</span></div>
+      <div class="lp-b-stat"><span class="n">$96,260</span><span class="l">David — One Round of Back-Ends</span></div>
+      <div class="lp-b-stat"><span class="n">3,987+</span><span class="l">Coaches Trained</span></div>
     </div>
-    <section class="lp-s-c">
+    <section class="lp-s-b dark">
       <div class="lp-wrap">
-        <div class="tag" style="color:#63B3ED">The 3-Step AI Content Engine™</div>
-        <h2 class="lp-h2-c">You'll Build This Live<br><span class="cb">Inside The Masterclass</span></h2>
-        <div class="lp-module"><div class="lp-mtag">Module 01</div><div><div class="lp-mtitle">The AI Content Factory — 10 Templates That Drive Views and Sales</div><div class="lp-mbody">Swipe the same 10 post templates that have generated millions of views for IFCA coaches — and use Claude to turn them into content in your own voice in under 10 minutes.</div></div></div>
-        <div class="lp-module"><div class="lp-mtag">Module 02</div><div><div class="lp-mtitle">The Done-For-You 90-Day Content Calendar</div><div class="lp-mbody">Leave with a full 90-day content plan — hooks, angles, and post ideas — built specifically for your niche using AI. Never stare at a blank screen again.</div></div></div>
-        <div class="lp-module"><div class="lp-mtag">Module 03</div><div><div class="lp-mtitle">The Andromeda Paid Amplification Method — $31/Lead on Meta</div><div class="lp-mbody">Take your best organic content, add $10–$50/day in paid amplification, and turn it into a predictable lead machine. No big budget required.</div></div></div>
-        <div class="text-center mt24"><a href="#" class="btn-lp-c">Save My Seat →</a><p class="lp-btn-sub" style="color:rgba(232,236,240,.22)">Live [Date] · No Replay</p></div>
+        <div class="tag" style="color:var(--gold-light)">Why This Matters to You</div>
+        <h2 class="lp-h2-b lt">Alycia Was Doing $20K–$30K Months.<br><em>And Losing Money.</em></h2>
+        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
+        <p class="lp-body-b lt">Sound familiar? Strong revenue but the margins aren't there. Constantly starting over. When Alycia plugged in the <strong>LTV Retention Method™</strong>, she didn't need more clients — she needed to keep and re-sign the ones she had.</p>
+        <p class="lp-body-b lt"><em>Now she has $30K–$40K in predictable recurring revenue every single month.</em> <strong>This masterclass is the entire system. Live. Free. One night only.</strong></p>
       </div>
     </section>
-    <section class="lp-s-c alt">
+    <section class="lp-s-b mid">
       <div class="lp-wrap">
-        <div class="tag" style="color:#63B3ED">Coaches Using the System</div>
-        <h2 class="lp-h2-c">Real Results from<br><span class="cb">AI-First Coaches</span></h2>
-        <div class="lp-testi-c"><div class="lp-tres-c">781 Registrants From One AI-Backed Webinar</div><div class="lp-tq-c">"We used the AI content system to promote our July masterclass and hit 781 registrants — the most we'd ever had. The organic content did half the heavy lifting and the paid ads did the rest. Total spend: $14,717."</div><div class="lp-ta-c">— IFCA Team, July 2024 AI Viral Webinar</div></div>
-        <div class="lp-testi-c"><div class="lp-tres-c">5–10 New Clients Monthly, No Content Burnout</div><div class="lp-tq-c">"Before AI I was posting every day and getting nowhere. Now I batch content in 2 hours, let Claude write the hooks, run $20/day in ads, and my DMs don't stop. Fully booked in 8 weeks."</div><div class="lp-ta-c">— IFCA Student, Online Nutrition Coach</div></div>
-        <div class="lp-testi-c"><div class="lp-tres-c">606 Registrants · 14.61% LP Conversion</div><div class="lp-tq-c">"The AI content framework made our September 2025 webinar the easiest launch we've run. 4,846 page views, 606 opt-ins at 14.61% CVR, and a replay page that hit 2,257 views on its own."</div><div class="lp-ta-c">— IFCA Team, September 2025</div></div>
+        <div class="tag">The Exact System Behind This Result</div>
+        <h2 class="lp-h2-b">What You'll Learn<br><em>June 11th</em></h2>
+        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
+        <ul class="lp-b-ul">
+          <li><strong>The Only 3 Ways to Build a Profitable Coaching Business</strong> — why most coaches pick the slowest, most expensive path.</li>
+          <li><strong>The LTV Retention Method™</strong> — the 5 keys to a client community that 2–4x's retention and converts back-ends at 40–60%.</li>
+          <li><strong>The Money Math Behind $146K</strong> — reverse-engineer your 2026 revenue goal in real time.</li>
+          <li><strong>How to Uncover Your Hidden Back-End Revenue</strong> — the offer structure killing your retention and the exact fix.</li>
+          <li><strong>The Re-Sign Script</strong> — the same 6-step script Alycia, David, and hundreds of IFCA coaches use on back-end calls.</li>
+        </ul>
+        <div class="text-center"><a href="#" class="btn-lp-b">Access the Free Workshop →</a></div>
       </div>
     </section>
-    <section class="lp-s-c" style="text-align:center">
+    <section class="lp-s-b">
       <div class="lp-wrap">
-        <div class="tag" style="color:#63B3ED;text-align:center">The AI Advantage</div>
-        <h2 class="lp-h2-c" style="font-size:clamp(26px,4.5vw,48px);margin-bottom:14px">Is Closing Fast</h2>
-        <p class="lp-body-c" style="max-width:500px;margin:0 auto 28px">Every month you're posting manually is another month your competitors are using AI to out-create and out-earn you. This masterclass takes 90 minutes. <strong style="color:#e8ecf0">The system change lasts forever.</strong></p>
-        <a href="#" class="btn-lp-c">Reserve My Free Seat →</a>
-        <p class="lp-btn-sub" style="color:rgba(232,236,240,.22);margin-top:12px">[Date] · [Time] EST · Limited</p>
+        <div class="tag">Alycia Isn't the Only One. Not Even Close.</div>
+        <h2 class="lp-h2-b"><em>Real Results.</em></h2>
+        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:22px"></div>
+        <div class="lp-testi-b"><div class="lp-tres-b">$30K–$40K MRR. No New Clients Required.</div><div class="lp-tq-b">"I was doing $20,000–$30,000 months but losing money. We implemented the LTV retention method. Now I have $30K–$40K in MRR. I could not sign another client for 4–6 months and still be profitable."</div><div class="lp-ta-b">— Alycia Israel, IFCA Student</div></div>
+        <div class="lp-testi-b"><div class="lp-tres-b">$702K Year. 2–3 Clients Per Week.</div><div class="lp-tq-b">"In 2022 my business made $702,000 and I only had to sign 2–3 clients per week. I quit my job as an accountant, went full-time in 4 weeks."</div><div class="lp-ta-b">— Vanessa Gillette, IFCA Student</div></div>
+        <div class="lp-testi-b"><div class="lp-tres-b">$96,260 Contracted. One Round. 24 of 26.</div><div class="lp-tq-b">"I re-signed 24 current clients, went 24 of 26. $96,260 contracted from one round of calls. It's uncomfortable in the best way."</div><div class="lp-ta-b">— David Pegram, IFCA Student</div></div>
       </div>
     </section>
-    <div class="lp-c-footer">© 2026 Impact Fitness Coaching Academy · NASM · AFAA · ISSA Approved CEP<br><span style="opacity:.5">Disclaimer · Privacy Policy · Terms</span></div>
-  </div><!-- /lp-c -->
+    <section class="lp-s-b dark" style="text-align:center">
+      <div class="lp-wrap">
+        <h2 class="lp-h2-b lt" style="font-size:clamp(26px,4.5vw,46px);margin-bottom:14px">Ready to Stop Starting Over<br><em>Every Single Month?</em></h2>
+        <p class="lp-body-b lt" style="max-width:500px;margin:0 auto 28px">Alycia did it. Vanessa did it. David did it. One masterclass, one system, one live event. June 11 at 7PM EST.</p>
+        <a href="#" class="btn-lp-b">Save My Free Seat — June 11 →</a>
+      </div>
+    </section>
+    <div style="background:#0a0a0a;padding:18px 24px;text-align:center;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.15);text-transform:uppercase;">© 2026 Impact Fitness Coaching Academy · NASM · AFAA · ISSA CEP<br><span style="opacity:.5">Disclaimer · Privacy Policy · Terms</span></div>
+  </div><!-- /lp-b6 -->
 
 </div><!-- /panel-landing -->
 
@@ -1264,6 +1110,7 @@ renderEvents();
 const VALS = {spend:15000,cpm:55,ctr:0.009,lpconv:0.27,attend:0.25,seeoffer:0.80,cvr:0.04,close:0.45,aov:11350,upsell:0.10,'upsell-aov':20000,partner:0};
 
 const SCENARIOS = {
+  jun11:  {spend:15000,cpm:56,ctr:0.010,lpconv:0.28,attend:0.25,seeoffer:0.82,cvr:0.05,close:0.50,aov:11350,upsell:0.08,'upsell-aov':20000,partner:0},
   best:   {spend:15000,cpm:52,ctr:0.012,lpconv:0.35,attend:0.30,seeoffer:0.87,cvr:0.06,close:0.55,aov:11350,upsell:0.10,'upsell-aov':20000,partner:0},
   mid:    {spend:15000,cpm:58,ctr:0.009,lpconv:0.27,attend:0.24,seeoffer:0.80,cvr:0.04,close:0.45,aov:11350,upsell:0.08,'upsell-aov':20000,partner:0},
   worst:  {spend:15000,cpm:90,ctr:0.006,lpconv:0.18,attend:0.16,seeoffer:0.60,cvr:0.02,close:0.28,aov:11350,upsell:0.05,'upsell-aov':20000,partner:0},
@@ -1397,7 +1244,7 @@ function calcAll(){
 }
 
 updateAllLabels();
-calcAll();
+loadScenario('jun11');
 
 // ── NAV ──────────────────────────────────────────────────────
 function showMain(id,btn){
@@ -1405,7 +1252,8 @@ function showMain(id,btn){
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('panel-'+id).classList.add('active');
   btn.classList.add('active');
-  document.getElementById('lp-subnav').classList.toggle('visible', id==='landing');
+  const sub = document.getElementById('lp-subnav');
+  if(sub) sub.style.display = id==='landing' ? 'flex' : 'none';
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -1416,881 +1264,7 @@ function showLP(id,btn){
   btn.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-// ── COPY KIT SUB-NAV ─────────────────────────────────────────
-function showCK(id,btn){
-  document.querySelectorAll('#panel-copykit .ck-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.ck-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('ck-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>
-
-<!-- ══════════════════════════════════════════════════════════
-  PANEL 5: COPY KIT
-══════════════════════════════════════════════════════════ -->
-<style>
-#panel-copykit{background:var(--bg);}
-#ck-subnav{
-  position:sticky;top:52px;z-index:190;
-  background:rgba(12,15,22,0.97);backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(74,127,165,.12);
-  display:flex;align-items:center;gap:4px;
-  padding:0 20px;height:40px;overflow-x:auto;
-}
-#ck-subnav::-webkit-scrollbar{display:none;}
-.ck-btn{
-  padding:4px 14px;background:none;border:1px solid transparent;
-  border-radius:20px;color:var(--muted);
-  font-family:'DM Mono',monospace;font-size:10px;
-  letter-spacing:.06em;text-transform:uppercase;
-  cursor:pointer;transition:all .15s;white-space:nowrap;
-}
-.ck-btn:hover{color:var(--text);background:rgba(255,255,255,.05);}
-.ck-btn.active{color:var(--orange);border-color:rgba(232,119,34,.35);background:rgba(232,119,34,.08);}
-.ck-panel{display:none;}
-.ck-panel.active{display:block;}
-.ck-wrap{max-width:860px;margin:0 auto;padding:28px 20px;}
-.ck-section{margin-bottom:32px;}
-.ck-section-hd{
-  font-family:'Bebas Neue',sans-serif;font-size:18px;
-  letter-spacing:.06em;color:var(--text);
-  border-bottom:1px solid var(--border);
-  padding-bottom:8px;margin-bottom:16px;
-  display:flex;align-items:center;gap:10px;
-}
-.ck-section-hd .ck-badge{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:.05em;font-weight:normal;}
-.ck-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:8px;padding:16px 18px;margin-bottom:12px;
-}
-.ck-card-title{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
-.ck-label{
-  font-family:'DM Mono',monospace;font-size:9px;
-  letter-spacing:1.5px;text-transform:uppercase;
-  margin-bottom:5px;display:block;
-}
-.ck-label.hook{color:var(--orange);}
-.ck-label.body{color:var(--electric);}
-.ck-label.cta{color:var(--green);}
-.ck-label.note{color:var(--gold);}
-.ck-label.subj{color:var(--gold-light);}
-.ck-label.sms{color:#a78bfa;}
-.ck-block{
-  background:var(--surface2);
-  border-left:3px solid var(--border-bright);
-  border-radius:0 5px 5px 0;
-  padding:10px 13px;margin-bottom:8px;
-  font-size:13px;line-height:1.7;color:rgba(232,236,244,.78);
-  white-space:pre-wrap;
-}
-.ck-block.hook{border-left-color:var(--orange);}
-.ck-block.body{border-left-color:var(--electric);}
-.ck-block.cta{border-left-color:var(--green);}
-.ck-block.note{border-left-color:var(--gold);color:rgba(212,175,113,.65);font-style:italic;font-size:12px;}
-.ck-block.subj{border-left-color:var(--gold-light);}
-.ck-block.sms{border-left-color:#a78bfa;background:rgba(167,139,250,.06);}
-.ck-entity-table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:12px;}
-.ck-entity-table th{background:var(--navy);color:#fff;padding:7px 10px;text-align:left;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;font-weight:500;}
-.ck-entity-table td{padding:7px 10px;border-bottom:1px solid rgba(74,127,165,.08);color:rgba(232,236,244,.7);}
-.ck-entity-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
-.ck-entity-table td:first-child{font-weight:700;color:var(--text);}
-.ck-timing{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;}
-.ck-timing-txt{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);font-weight:600;}
-.ck-hook-bank{display:grid;gap:6px;}
-.ck-hook-item{
-  background:var(--surface2);border-left:3px solid var(--orange);
-  border-radius:0 5px 5px 0;padding:8px 12px;
-  font-size:13px;color:rgba(232,236,244,.75);line-height:1.5;
-}
-.ck-script-meta{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.04em;margin-bottom:12px;}
-.ck-tl{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
-.ck-tl-row{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:start;}
-.ck-tl-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);text-align:right;padding-top:3px;font-weight:600;}
-.ck-tl-content{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:9px 13px;}
-.ck-tl-title{font-weight:600;font-size:12px;margin-bottom:3px;}
-.ck-tl-note{font-size:11px;color:var(--muted);}
-</style>
-
-<div id="panel-copykit" class="panel">
-  <div id="ck-subnav">
-    <button class="ck-btn active" onclick="showCK('tof',this)">TOF · Cold Ads</button>
-    <button class="ck-btn" onclick="showCK('mof',this)">MOF · Warm Retargeting</button>
-    <button class="ck-btn" onclick="showCK('bof',this)">BOF · Hot Retargeting</button>
-    <button class="ck-btn" onclick="showCK('email',this)">Email Sequences</button>
-    <button class="ck-btn" onclick="showCK('sms',this)">SMS Sequence</button>
-    <button class="ck-btn" onclick="showCK('organic',this)">Organic Video Shoot</button>
-  </div>
-
-  <!-- ── TOF ── -->
-  <div id="ck-tof" class="ck-panel active">
-  <div class="ck-wrap">
-    <div class="section-title">TOF — Cold Traffic Ad Creative</div>
-    <div class="section-sub">Budget: 60–70% · A+ Broad + Cold Interest · Launch May 16 · 5 Andromeda Entities — 5 different buying reasons</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Andromeda Entity Map</div>
-      <div style="overflow-x:auto"><table class="ck-entity-table">
-        <thead><tr><th>ENTITY</th><th>FORMAT</th><th>HOOK TYPE</th><th>CORE EMOTION</th><th>PRESENTER</th></tr></thead>
-        <tbody>
-          <tr><td>TOF-1</td><td>Selfie Rant (F2)</td><td>Confession Arc</td><td>Hope</td><td>Jordan</td></tr>
-          <tr><td>TOF-2</td><td>B-roll + Text Overlay (F1)</td><td>Named Result</td><td>Desire</td><td>Jordan (VO)</td></tr>
-          <tr><td>TOF-3</td><td>Selfie Rant (F2)</td><td>Contrarian / Reframe</td><td>Frustration → Relief</td><td>Erin</td></tr>
-          <tr><td>TOF-4</td><td>Math/Proof Overlay (F3)</td><td>Insider Secret / Data</td><td>Curiosity</td><td>Jordan (VO)</td></tr>
-          <tr><td>TOF-5</td><td>Selfie Rant (F2)</td><td>Identity Callout</td><td>Urgency / FOMO</td><td>Erin</td></tr>
-        </tbody>
-      </table></div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">TOF-1 · Confession Arc · Jordan <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Selfie · 30–45s</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">The Hamster Wheel Confession</div>
-        <span class="ck-label hook">🎣 Hook (0–3s)</span>
-        <div class="ck-block hook">I used to think getting more clients was the answer. I was wrong.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">Here's the thing nobody told me about building a coaching business...</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">We spent years thinking growth meant more new clients. More DMs. More content. More hustle. And our revenue was all over the place.
-
-Then we figured out that the real money — the predictable money — was already sitting in our existing client base. We just weren't asking for it.
-
-Vanessa signed 2 to 3 clients a week and made $702,000. David did one round of re-sign calls and contracted $96,260. Alycia has $30–$40K every single month without signing a single new client.
-
-One system. The LTV Retention Method.</div>
-        <span class="ck-label cta">CTA (30–45s)</span>
-        <div class="ck-block cta">I'm teaching it live on June 11th. Free. No replay. Comment MRR and I'll send you the link.</div>
-        <span class="ck-label note">📋 Production note</span>
-        <div class="ck-block note">Selfie format, talking head, casual. Jordan walking or at desk. No graphics needed. Long caption (200–400 words) expanding with specific numbers.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">TOF-2 · Named Result · B-roll + Text Overlay <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Jordan VO · 30–45s</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">Alycia's $30K–$40K MRR Story</div>
-        <span class="ck-label hook">🎣 Hook (0–3s)</span>
-        <div class="ck-block hook">She was doing $20K–$30K months. And losing money.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">Not because her business was bad. Because she had no back-end.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Alycia came to us with a solid offer and a real client base. The problem? Every month she was starting from zero. Same hustle. Same hamster wheel.
-
-We plugged in the LTV Retention Method. In the first month alone she generated $25K from back-end calls on her existing clients. She now has $30 to $40K in recurring revenue every single month.
-
-Her words: "I could not sign another client for four to six months and still be profitable."
-
-That's what a retention-first back-end system does. It turns every client you already have into a recurring asset.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">I'm teaching the exact system behind this result — live, June 11th. Free. Comment RETENTION and I'll send you the registration link.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">TOF-3 · Contrarian Reframe · Erin <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Selfie · 30–45s</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">Stop Signing New Clients (It's a Trap)</div>
-        <span class="ck-label hook">🎣 Hook (0–3s)</span>
-        <div class="ck-block hook">Hot take: signing new clients every month might actually be hurting your business.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">Before you come for me — let me explain.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">If you need a new client every single month just to stay flat, you don't have a growth problem. You have a retention problem.
-
-The coaches we work with who hit $30K, $50K, $100K months aren't necessarily signing more clients. They've built a system where every client they already have keeps paying them — at higher ticket prices — for years.
-
-Back-end clients close at 40 to 60 percent. New clients? 20 to 40 percent. The math is insane.
-
-Jordan and I are hosting a free masterclass on June 11th where we're teaching the full system. The Community Funnel. The re-sign script. The exact offer structure.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment RESIGN and I'll send you the link. Free. Live. No replay.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">TOF-4 · Insider Data · Math Proof Overlay <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Jordan VO · 30s</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">The 25x Stat That Changes Everything</div>
-        <span class="ck-label hook">🎣 Hook (0–3s)</span>
-        <div class="ck-block hook">It's 25x more expensive to acquire a new client than to keep the one you have.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">Harvard Business Review. Not me. But here's what that means for your coaching business...</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">A 5% increase in client retention increases profits by 25 to 95 percent. Bain and Company.
-
-Back-end clients convert at 50 to 70 percent. New prospects? 20 to 40. That gap is where the money is.
-
-One of our students, David, went 24 for 26 on back-end re-sign calls. He contracted $96,260 in a single round. He wasn't a closer genius. He had a system.
-
-We're teaching that system live on June 11th. Free. No replay.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment LTV and I'll send you the link. One night only — no replay.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">TOF-5 · Identity Callout · Erin <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Selfie · 30–45s</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">The Coach Who Keeps Starting Over</div>
-        <span class="ck-label hook">🎣 Hook (0–3s)</span>
-        <div class="ck-block hook">This is for the fitness coach who feels like they're starting over every single month.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">You're not bad at business. You're missing one system.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">You sign a client. They finish their program. They leave. You go back to grinding for the next one. The revenue yo-yos. Some months are great. Some are terrifying.
-
-Alycia could not sign a new client for six months and still be profitable. Vanessa made $702K in one year signing 2–3 clients per week. David made $96,260 from one round of re-sign calls.
-
-We're teaching how all of it works on June 11th. Live. Free.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment MONTHLY and I'll send you the registration link. No replay. One night only.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Hook Bank — 15 Additional TOF Hooks</div>
-      <div class="ck-hook-bank">
-        <div class="ck-hook-item">Your best clients are willing to pay you again. Most coaches never let them.</div>
-        <div class="ck-hook-item">The fitness coach making $702,000 a year only signed 2–3 clients per week. Here's the math.</div>
-        <div class="ck-hook-item">POV: You stop signing new clients for 6 months — and your revenue goes up.</div>
-        <div class="ck-hook-item">$96,260 from one round of phone calls. No new leads. Here's how.</div>
-        <div class="ck-hook-item">The back-end close rate is 40–60%. The front-end close rate is 20–40%. You're working the wrong end of your business.</div>
-        <div class="ck-hook-item">Most coaches leave $100K–$1M sitting in their client relationships every year. This is what that looks like.</div>
-        <div class="ck-hook-item">I'm going to show you a math problem that will ruin the way you think about new clients. In a good way.</div>
-        <div class="ck-hook-item">The new-client treadmill isn't your business model. It's a symptom of not having one.</div>
-        <div class="ck-hook-item">What if you could not sign a single new client for 4 months and still be profitable? (This is real.)</div>
-        <div class="ck-hook-item">She was doing $30K months. Losing money. We changed one thing.</div>
-        <div class="ck-hook-item">Retention is the new marketing. Here's why the top coaches are building back-ends instead of bigger audiences.</div>
-        <div class="ck-hook-item">The clients who trust you most are already in your business. You're just not monetizing them.</div>
-        <div class="ck-hook-item">Stop trading a good client for a cold lead. The math doesn't work and I'm going to prove it.</div>
-        <div class="ck-hook-item">We went from starting over every month to $30–$40K in recurring revenue. This is the system.</div>
-        <div class="ck-hook-item">Coaches who make $100K/month don't grind harder. They've built something that pays them twice.</div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-tof -->
-
-  <!-- ── MOF ── -->
-  <div id="ck-mof" class="ck-panel">
-  <div class="ck-wrap">
-    <div class="section-title">MOF — Warm Retargeting</div>
-    <div class="section-sub">Budget: 20–25% · Audience: LP visitors, IG engagers, 50%+ video viewers, past opt-ins · Goal: Registration conversion</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">MOF-1 · Proof Heavy · David's 24/26 <span class="ck-badge badge" style="background:rgba(99,179,237,.12);color:var(--electric)">Jordan · Warm engagers</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">🎣 Hook</span>
-        <div class="ck-block hook">David went 24 for 26 on back-end re-sign calls. No pitch. No pressure. A system.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Before IFCA, David was working 4 jobs making $8,000 a month. When he learned the LTV Retention Method and went through the re-sign process, he contracted $96,260 from one round of back-end calls.
-
-24 out of 26 clients said yes. That's a 92% conversion rate. Not because he's a world-class closer. Because the system does the work.
-
-We're teaching the entire playbook live on June 11th. If you haven't grabbed your seat, this is the sign.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Link in bio → Register free before spots fill. June 11 · 7PM EST · No replay.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">MOF-2 · Urgency · Date Approaching <span class="ck-badge badge" style="background:rgba(99,179,237,.12);color:var(--electric)">Run June 4–8</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">🎣 Hook</span>
-        <div class="ck-block hook">One week from tonight. Free masterclass. The LTV Retention Method. No replay.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">On June 11th at 7PM EST, we're going live to teach the exact retention system behind:
-
-→ Alycia's $30–$40K in monthly recurring revenue
-→ David's $96,260 from one round of back-end calls
-→ Vanessa's $702,000 year signing just 2–3 clients per week
-
-We're covering:
-✓ The 5-Step Community Funnel™
-✓ The Money Math behind $146K in added revenue
-✓ The Re-Sign Script — 6 steps, 40–60% conversion
-✓ How to uncover the hidden back-end revenue already in your business
-
-This is not being recorded. If you're not there live, you don't get it.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Register free — link in bio. June 11 at 7PM. See you there.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">MOF-3 · Vanessa Proof Story <span class="ck-badge badge" style="background:rgba(99,179,237,.12);color:var(--electric)">Jordan · Warm retargeting</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">🎣 Hook</span>
-        <div class="ck-block hook">In 2022, one of our students made $702,000. She only signed 2 to 3 clients per week. She used to be an accountant.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Vanessa didn't have a massive audience. She had a retention-first back-end system that made every client worth two to three times what most coaches collect.
-
-Frontend at $2,500. Backend at $6,900. 63% re-sign rate. That's the math behind $702K on 2 to 3 new clients a week.
-
-The thing that made it work wasn't her content or her ads. It was the Community Funnel. The re-sign system. The offer structure that made continuing obvious.
-
-On June 11th, I'm teaching the full LTV Retention Method.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Register free — link in bio. Live June 11 · 7PM EST. This is not being recorded.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">MOF-4 · Explicit Agenda · Static / Carousel <span class="ck-badge badge" style="background:rgba(99,179,237,.12);color:var(--electric)">Conversion focused</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">Primary Image Text / Slide 1</span>
-        <div class="ck-block hook">FREE LIVE MASTERCLASS — JUNE 11 · 7PM EST
-The LTV Retention Method™
-How to Add $146K in Revenue Without Signing a Single New Client</div>
-        <span class="ck-label body">Slides 2–6</span>
-        <div class="ck-block body">SLIDE 2: The Only 3 Ways to Build a Profitable Coaching Business (most coaches are stuck on the hardest one)
-SLIDE 3: The Money Math Behind $146K — sign 2 clients/month and build $700K+/year
-SLIDE 4: The 5-Step Community Funnel™ — 2–4x retention + 40–60% back-end conversion
-SLIDE 5: The Re-Sign Script — 6-step process, David went 24-for-26
-SLIDE 6: This is FREE. No replay. June 11 only. Register → [link]</div>
-        <span class="ck-label cta">Caption CTA</span>
-        <div class="ck-block cta">This is everything we're covering on June 11th. Live. Free. Not being recorded. If you've been thinking about registering, this is your reminder. Link in bio.</div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-mof -->
-
-  <!-- ── BOF ── -->
-  <div id="ck-bof" class="ck-panel">
-  <div class="ck-wrap">
-    <div class="section-title">BOF — Hot Retargeting + Post-Event</div>
-    <div class="section-sub">Budget: 10–15% · Audience: Registered non-attendees, replay viewers, non-bookers · Static image + bold text overlay wins at BOF</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">BOF-1 · Day-of Reminder <span class="ck-badge badge" style="background:rgba(34,197,94,.12);color:var(--green)">June 11 only · Registered non-attendees</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">Image Text</span>
-        <div class="ck-block hook">TONIGHT AT 7PM EST — YOU'RE REGISTERED
-The LTV Retention Method™ Masterclass</div>
-        <span class="ck-label body">Caption</span>
-        <div class="ck-block body">Hey — tonight's the night. June 11 at 7PM EST.
-
-You registered for the LTV Retention Method Masterclass and I don't want you to miss it. This is not being recorded.
-
-Here's what we're covering:
-→ How Alycia built $30–$40K in MRR from her existing clients
-→ The 5-Step Community Funnel™
-→ David's Re-Sign Script (24 for 26 on back-end calls)
-→ The Money Math behind $146K without new clients
-
-Check your email for your Zoom link. Block 7–8:30PM.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">See you tonight. 7PM EST. Your Zoom link is in the confirmation email.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">BOF-2 · Post-Event Replay Push <span class="ck-badge badge" style="background:rgba(34,197,94,.12);color:var(--green)">48hr window · No-show retarget</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">🎣 Hook</span>
-        <div class="ck-block hook">The masterclass happened last night. You weren't there. The replay goes down in 48 hours.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">No judgment. Life happens. But I want to make sure you get this before it's gone.
-
-We taught the full LTV Retention Method last night. The Community Funnel. The Math. The Re-Sign Script. The exact offer structure.
-
-The replay is live for the next 48 hours only. After that, it's gone.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Watch the replay → [link] · Closes [date] at midnight. Not kidding.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">BOF-3 · Attendees Who Didn't Book <span class="ck-badge badge" style="background:rgba(34,197,94,.12);color:var(--green)">Day 1–3 post-event</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">🎣 Hook</span>
-        <div class="ck-block hook">If you were on the masterclass last night and the LTV Retention Method resonated — here's the next step.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">You saw the math. You saw the case studies. You saw how the Community Funnel and the re-sign system work.
-
-If you left wondering "could this work for my business?" — that's exactly what a strategy call is for.
-
-No pressure. No pitch. A real conversation about where you are, where you want to be, and whether this system makes sense for your situation.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Book a free strategy call → [link] · Spots are limited this week.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">BOF-4 · Last Chance — Replay Closing <span class="ck-badge badge" style="background:rgba(34,197,94,.12);color:var(--green)">Final urgency push</span></div>
-      <div class="ck-card">
-        <span class="ck-label hook">Image Text</span>
-        <div class="ck-block hook">LAST CHANCE — REPLAY CLOSES TONIGHT
-The LTV Retention Method™</div>
-        <span class="ck-label body">Caption</span>
-        <div class="ck-block body">The replay of last week's masterclass closes tonight at midnight.
-
-After that, it's gone. We don't run these as evergreen content. If you want to see how Vanessa built $702K signing 2–3 clients per week, how David went 24 for 26 on back-end calls, and how Alycia has $30–$40K in MRR without new clients — this is your last chance.
-
-Watch now. It's 90 minutes. Worth every minute.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Watch before midnight → [link]</div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-bof -->
-
-  <!-- ── EMAIL ── -->
-  <div id="ck-email" class="ck-panel">
-  <div class="ck-wrap">
-    <div class="section-title">Email Sequence</div>
-    <div class="section-sub">Pre-event 4-touch email sequence + 6-touch post-event follow-up · Plain text outperforms HTML for urgency/personal feel</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Pre-Event Email Sequence</div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Immediately on registration</span><span class="badge badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">You're in — here's your link for June 11th 🎉</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-You're registered for the LTV Retention Method™ Masterclass.
-
-📅 Date: Wednesday, June 11th
-⏰ Time: 7:00 PM EST
-📍 Where: Zoom (link below)
-🔗 Join here: [ZOOM LINK]
-
-Add it to your calendar now → [CALENDAR LINK]
-
-One important thing: this masterclass will NOT be recorded. If you're not there live, you won't be able to watch it later. So block the time and show up.
-
-Here's a quick preview of what we're covering:
-
-→ The 5-Step Community Funnel™ that 2–4x's client retention
-→ The Money Math behind adding $146K without new clients
-→ The Re-Sign Script David used to go 24-for-26 on back-end calls
-→ Alycia's full $30–$40K MRR story — the exact system behind it
-
-We'll also be giving away 3 exclusive bonuses to everyone who attends live.
-
-See you June 11th.
-
-— Jordan Dugger + Taeler Means</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">72 hours before (June 8)</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">3 days until the masterclass — here's what to expect</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Three days until we go live. Quick preview of what you're walking into.
-
-THE PROBLEM MOST COACHES IGNORE
-Why the "new client model" keeps you stuck — and the math that proves it.
-
-THE 5-STEP COMMUNITY FUNNEL™
-The retention architecture that keeps clients for years (not weeks) and builds $30–$40K in monthly recurring revenue.
-
-THE MONEY MATH
-How signing just 2 clients per month translates to $146K+ in added annual revenue. (You'll want to see this spreadsheet.)
-
-THE RE-SIGN SCRIPT
-The exact 6-step conversation David used to go 24 for 26 on back-end calls and contract $96,260 in a single round.
-
-And you'll also get 3 exclusive live bonuses — including the Re-Sign Script itself — just for attending.
-
-This is not being recorded. Block June 11th at 7PM EST.
-
-Your Zoom link: [LINK]
-
-See you in 3 days.
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">48 hours before (June 9)</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">Tomorrow night. Are you ready?</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Tomorrow at 7PM EST.
-
-Quick question before we go live: are you currently losing clients at the end of their program and going back to scratch for the next one?
-
-If yes — tomorrow night is going to change how you think about your business.
-
-Alycia was doing $20–$30K months. But she was losing money. We plugged in the LTV Retention Method. She now has $30–$40K every month in recurring revenue. And she could go 4–6 months without a new client and still be profitable.
-
-That's what a retention-first back-end does.
-
-Tomorrow night, you're getting the full system. See you at 7PM.
-
-🔗 Your Zoom link: [LINK]
-
-— Jordan + Taeler</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">24 hours before (June 10)</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">One more night (read this)</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Tomorrow at 7PM EST. Last reminder before we go live.
-
-How much revenue are you currently leaving on the table from clients who've already trusted you once?
-
-If you've ever let a client finish their program, say goodbye, and go cold — that was a missed $5K–$15K back-end opportunity.
-
-Tomorrow night, I'm going to show you exactly how to close that gap. And how to build a business where every client you sign is worth 2–3x what you're currently collecting.
-
-No fluff. No theory. Real systems. Real math. Real scripts.
-
-🔗 Zoom link: [LINK]
-
-One more time: this is NOT being recorded. Show up live.
-
-See you tomorrow,
-Jordan</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Post-Event Email Follow-Up (7 Days)</div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Within 15 min of event end</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">The replay + your bonuses are here</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Thanks for being there tonight. That was an incredible room.
-
-As promised, here are your exclusive live bonuses:
-
-🎁 BONUS #1: LTV Re-Sign Script → [LINK]
-🎁 BONUS #2: IFCA Money Math Spreadsheet → [LINK]
-
-The replay is also live for the next 48 hours: [REPLAY LINK]
-
-⚠️ Replay closes [DATE] at midnight.
-
-If tonight sparked questions about whether the LTV Retention Method applies to YOUR specific business — that's exactly what a strategy call is for.
-
-Book a free 1:1 call here: [BOOKING LINK]
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Day 1 — Replay urgency</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">Replay closes tomorrow midnight</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-The masterclass replay closes tomorrow at midnight.
-
-If you attended and want to rewatch the re-sign script segment or the Money Math breakdown: [REPLAY LINK]
-
-If you missed the live event, this is your only chance.
-
-After midnight it's gone.
-
-And if you're ready to talk about implementing this → [BOOKING LINK]
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Day 2 — Case study + objection</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">"I was terrified of back-end calls. Then this happened."</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Direct quote from David Pegram before he learned the LTV Retention Method:
-
-"I've never done back-ends before. Ever. I was terrified of them."
-
-He went 24 for 26 on his first round. $96,260 contracted.
-
-The thing that holds most coaches back is the fear of being pushy. The Re-Sign Script flips that. It's a continuation conversation, not a sales call. And when you deliver real results, your clients WANT to keep going.
-
-Ready to talk through how this applies to your business? → [BOOKING LINK]
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Day 3 — Pop-up Q&A event</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">We're doing a bonus Q&A (Sunday)</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-We got so many great questions after Thursday's masterclass that we're adding one more session.
-
-This Sunday, [DATE] at [TIME] EST — Jordan and Taeler are hosting a live Q&A/Hot Seat.
-
-This is NOT a re-run. It's a live Q&A where you can ask specific questions about:
-→ How to structure your back-end offer
-→ How to run the re-sign conversation
-→ How to build the Community Funnel
-→ Whether this makes sense for your business model
-
-Limited spots. Register here → [LINK]
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Day 5 — FAQ / Objections</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">The 3 questions I keep getting asked</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-❓ "Do I need a big client base?"
-No. You need 3–5 current or past clients. That's enough for one round to generate $15K–$30K.
-
-❓ "What if my clients can't afford a higher-ticket back-end?"
-At 40–60% conversion, the pricing is rarely the friction — it's the framing. We give you the exact script.
-
-❓ "What if I don't have a community yet?"
-The 5-Step Community Funnel starts from scratch. 30–60 day build. You build it with your current clients.
-
-If you want to go deeper → [BOOKING LINK]
-
-— Jordan</div>
-      </div>
-
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Day 7 — Final case study + last call</span><span class="badge" style="background:rgba(184,147,86,.12);color:var(--gold-light)">Email</span></div>
-        <span class="ck-label subj">Subject</span>
-        <div class="ck-block subj">Last email from me on this (Vanessa's full story)</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Hey [First Name],
-
-Last one.
-
-Vanessa came to us as an accountant. She built her coaching business, signed her first clients, and then started building the back-end.
-
-Year 1: $702,000. Signing 2–3 clients per week. 70% close rate.
-Year 2: She increased FE to $2,500 and BE to $6,900. That one change added $288,000 in new revenue.
-Year 3: $2.32 million.
-
-None of that is magic. It's all system.
-
-If you want to build this in your coaching business, book a call with our team: [BOOKING LINK]
-
-— Jordan</div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-email -->
-
-  <!-- ── SMS ── -->
-  <div id="ck-sms" class="ck-panel">
-  <div class="ck-wrap">
-    <div class="section-title">SMS Sequence</div>
-    <div class="section-sub">6-touch pre-event + 1 post-event · Plain text only · Keep under 160 chars where possible</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Pre-Event SMS Sequence</div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Immediately on registration</span></div>
-        <div class="ck-block sms">Hey [First Name]! You're registered for the LTV Retention Method™ Masterclass — June 11 at 7PM EST. Here's your Zoom link: [LINK]. This is NOT being recorded — see you there! 🔥 — Jordan @ IFCA</div>
-      </div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">48 hours before (June 9)</span></div>
-        <div class="ck-block sms">Hey! Tomorrow night — LTV Retention Method™ Masterclass. June 11 @ 7PM EST. Don't forget your link: [LINK]. See you there! — Jordan @ IFCA</div>
-      </div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">4 hours before (June 11 @ 3PM EST)</span></div>
-        <div class="ck-block sms">Tonight! LTV Retention Method™ Masterclass starts at 7PM EST — 4 hours away. Your link: [LINK]. Don't miss it — no replay! 🔥</div>
-      </div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">1 hour before (June 11 @ 6PM EST)</span></div>
-        <div class="ck-block sms">1 HOUR until we go live. LTV Retention Method™ Masterclass — 7PM EST. Your link: [LINK]. See you soon!</div>
-      </div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">10 minutes before (June 11 @ 6:50PM EST)</span></div>
-        <div class="ck-block sms">Going LIVE in 10 minutes! Join now → [LINK] 🚀</div>
-      </div>
-    </div>
-    <div class="ck-section">
-      <div class="ck-section-hd">Post-Event SMS</div>
-      <div class="ck-card">
-        <div class="ck-timing"><span class="ck-timing-txt">Within 15 min of event end</span></div>
-        <div class="ck-block sms">The masterclass is done! Your bonuses + replay (48hr only) are in your email. Check it now! 🎁 Want to chat about applying this to your biz → [BOOKING LINK]</div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-sms -->
-
-  <!-- ── ORGANIC ── -->
-  <div id="ck-organic" class="ck-panel">
-  <div class="ck-wrap">
-    <div class="section-title">Organic Video Shoot — May 1–2</div>
-    <div class="section-sub">6 scripts (3 Jordan · 3 Erin) + 5 B-Roll concepts · 14-day pre-launch timeline · DM keywords: MRR, RETENTION, RESIGN, LTV, SCALE</div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">14-Day Organic Post Timeline</div>
-      <div class="ck-tl">
-        <div class="ck-tl-row"><div class="ck-tl-date">MAY 1–2</div><div class="ck-tl-content"><div class="ck-tl-title">🎥 Shoot Day</div><div class="ck-tl-note">Film all 6 reel scripts + b-roll. These feed all three phases.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">MAY 5–8</div><div class="ck-tl-content"><div class="ck-tl-title">Phase 1: Problem-Awareness (no event mention)</div><div class="ck-tl-note">Jordan: New-client treadmill. Erin: The coach who keeps starting over. Build desire without pitching the event.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">MAY 9–13</div><div class="ck-tl-content"><div class="ck-tl-title">Phase 2: Proof + Teaser Content</div><div class="ck-tl-note">Jordan: Vanessa $702K story. Erin: Alycia $30–$40K MRR. Hint at "something coming" in captions.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">MAY 16</div><div class="ck-tl-content"><div class="ck-tl-title">Phase 3: Official Announcement — Ads Launch Same Day</div><div class="ck-tl-note">Jordan + Erin both post event invite reels. Drive registrations hard.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">MAY 17–JUNE 8</div><div class="ck-tl-content"><div class="ck-tl-title">Ongoing: Proof + Urgency Stories</div><div class="ck-tl-note">Daily stories. Student win drops. Countdown posts. Boost top-performing organic reel as paid ad.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">JUNE 9–10</div><div class="ck-tl-content"><div class="ck-tl-title">Final Urgency Push</div><div class="ck-tl-note">Countdown reel. "2 days out" + "tomorrow night" posts.</div></div></div>
-        <div class="ck-tl-row"><div class="ck-tl-date">JUNE 11</div><div class="ck-tl-content"><div class="ck-tl-title">Event Day: Going-Live Selfie Reel + Stories</div><div class="ck-tl-note">Jordan selfie reel 10–11AM. Erin story countdown. Both post "tonight at 7PM" feed post.</div></div></div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Jordan Script 1 — Problem-Awareness <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Phase 1 · No event mention</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">The New-Client Treadmill</div>
-        <div class="ck-script-meta">Selfie rant · 30–45s · Post May 5–8</div>
-        <span class="ck-label hook">Hook (0–3s)</span>
-        <div class="ck-block hook">If you need a new client every month just to stay flat, your business model is broken. And it's not your fault.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">Here's the actual problem nobody's talking about.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Most coaches are running what I call the new-client treadmill. You hustle to sign someone. You deliver great results. They finish the program. They leave. You go back to zero and start over.
-
-Here's the truth: the coaches making $50K, $100K, $150K months aren't just signing more clients. They've built a back-end that pays them again and again from the same client relationships.
-
-Back-end clients close at 40 to 60 percent. New clients? 20 to 40. The math is that different.
-
-The most profitable coaching business isn't the one with the most leads. It's the one with the highest LTV.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment MRR and I'll DM you the exact framework for building this in your business.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Jordan Script 2 — Proof Reel <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Phase 2 · First teaser mention</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">$702K. Accountant. 2–3 Clients Per Week.</div>
-        <div class="ck-script-meta">Selfie or b-roll VO · 30–45s · Post May 9–13</div>
-        <span class="ck-label hook">Hook</span>
-        <div class="ck-block hook">In 2022, one of our students made $702,000. She only signed 2 to 3 clients per week. She used to be an accountant.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">Vanessa didn't have a massive audience. She had a retention-first back-end system that made every client worth two to three times what most coaches collect.
-
-Frontend at $2,500. Backend at $6,900. 63% re-sign rate. That's the math behind $702K on 2 to 3 new clients a week.
-
-She quit her job in 4 weeks. She's now on track to $1 million.
-
-We call it the LTV Retention Method. And I'm sharing the full system soon.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment SCALE if you want to be the first to know when we go live with it.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Jordan Script 3 — Event Invite <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">May 16 launch + June 11 morning reprise</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">I'm Going Live June 11th — The LTV Retention Method</div>
-        <div class="ck-script-meta">Selfie rant · 30–45s · Post May 16 (repost June 11 AM)</div>
-        <span class="ck-label hook">Hook</span>
-        <div class="ck-block hook">On June 11th at 7PM Eastern, I'm going live to teach the LTV Retention Method. And I want you there.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">This is the exact system behind Vanessa's $702K year. David's $96,260 from one round of back-end calls. Alycia's $30 to $40K in monthly recurring revenue without signing new clients.
-
-I'm going to cover the full Community Funnel, the Money Math, the Re-Sign Script, and the offer structure in 90 minutes.
-
-It's free. It's live. It is not being recorded. If you're not there, you don't get it.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment MRR and I'll DM you the registration link. Or go to the link in my bio right now. June 11. 7PM EST. See you there.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Erin Script 1 — Problem-Awareness <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Phase 1 · No event mention</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">The Coach Who Keeps Starting Over</div>
-        <div class="ck-script-meta">Selfie rant · 30–45s · Post May 5–8</div>
-        <span class="ck-label hook">Hook</span>
-        <div class="ck-block hook">This is for the coach who is killing it — and somehow feels like they're still starting over every single month.</div>
-        <span class="ck-label hook">Re-hook (10–12s)</span>
-        <div class="ck-block hook">You're not bad at business. You're missing one thing.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">I see this all the time. Coach signs a great client. Does incredible work. Client gets results. Client finishes. Client leaves. Coach goes back to grinding for the next one.
-
-And the revenue yo-yos. Great month. Scary month. Great month. Scary month.
-
-The coaches who break through to $30K, $50K, consistent months have one thing the others don't: a back-end that turns every client into a long-term relationship.
-
-Your best clients aren't done with you. They're waiting for you to ask them to stay.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment CLIENTS and I'll DM you what the back-end system looks like.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Erin Script 2 — Alycia Case Study <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">Phase 2</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">She Was Losing Money at $30K Months. Now She Has $40K MRR.</div>
-        <div class="ck-script-meta">Selfie · 30–45s · Post May 9–13</div>
-        <span class="ck-label hook">Hook</span>
-        <div class="ck-block hook">Alycia was doing $20 to $30K months. And she was losing money. Not because she wasn't good. Because she had no back-end.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">We implemented the LTV Retention Method. Built her community. Built her re-sign system.
-
-In the first month, she generated $25K from existing client back-end calls alone.
-
-Now she has $30 to $40K in monthly recurring revenue. Every month. Without signing a new client.
-
-Her words: "I could not sign another client for four to six months and still be profitable."
-
-That's what a retention system does. It builds a floor under your business so you're never starting from zero again.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment RETENTION and I'll show you what this system looks like.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">Erin Script 3 — Event Invite <span class="ck-badge badge" style="background:rgba(232,119,34,.15);color:var(--orange)">May 16 launch</span></div>
-      <div class="ck-card">
-        <div class="ck-card-title">Jordan and I Are Hosting Something Special June 11th</div>
-        <div class="ck-script-meta">Selfie · 30–45s · Post May 16</div>
-        <span class="ck-label hook">Hook</span>
-        <div class="ck-block hook">Jordan and I are hosting a free live masterclass on June 11th, and I want you to be there.</div>
-        <span class="ck-label body">Body</span>
-        <div class="ck-block body">We're teaching the full LTV Retention Method. The system behind Vanessa's $702K year. Alycia's $30 to $40K in MRR. David's 24 for 26 re-sign calls.
-
-The Community Funnel. The Money Math. The Re-Sign Script. The offer structure. Everything.
-
-It's 90 minutes. It's live. It is not being recorded.
-
-If you're an online fitness, nutrition, or health coach who's tired of the new-client hamster wheel — this masterclass was made for you.</div>
-        <span class="ck-label cta">CTA</span>
-        <div class="ck-block cta">Comment MASTERCLASS and I'll send you the registration link. Or grab it from the link in my bio. June 11 · 7PM EST. See you there.</div>
-      </div>
-    </div>
-
-    <div class="ck-section">
-      <div class="ck-section-hd">B-Roll Shot List</div>
-      <div class="ck-card">
-        <div style="display:grid;gap:8px">
-          <div style="background:var(--surface2);border-radius:5px;padding:10px 12px"><div style="font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)">1. Jordan at whiteboard / desk — math walkthrough</div><div style="font-size:11px;color:var(--muted)">Writing out the LTV math: $2,500 FE + $6,900 BE × 2 clients/week = $702K. Also: "40–60% back-end close rate" written large. Use for TOF-4 paid ad and b-roll overlays.</div></div>
-          <div style="background:var(--surface2);border-radius:5px;padding:10px 12px"><div style="font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)">2. Jordan walking + talking — casual outdoor or hallway</div><div style="font-size:11px;color:var(--muted)">Natural movement b-roll. Use as backgrounds for text overlays. 2–3 min of footage.</div></div>
-          <div style="background:var(--surface2);border-radius:5px;padding:10px 12px"><div style="font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)">3. Erin selfie — home/studio, natural light</div><div style="font-size:11px;color:var(--muted)">All three Erin scripts. Casual, warm energy. Minimal makeup. 30–45s takes, 2 takes each.</div></div>
-          <div style="background:var(--surface2);border-radius:5px;padding:10px 12px"><div style="font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)">4. Phone/laptop screen — GHL results, Stripe notifications</div><div style="font-size:11px;color:var(--muted)">B-roll of scrolling through results, client wins. Use for proof overlay content.</div></div>
-          <div style="background:var(--surface2);border-radius:5px;padding:10px 12px"><div style="font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)">5. Jordan + Erin together — co-host announcement (15–20s)</div><div style="font-size:11px;color:var(--muted)">Casual clip announcing "we're doing something big June 11th." Used for IFCA page joint announcement.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div><!-- /ck-organic -->
-
-</div><!-- /panel-copykit -->
-
+// ── HEADLINE TOGGLE (LP-B LTV/MRR) ──────────────────────────────
 const LP_B_HEADLINES = [
   {
     label:'1 · $14,800 MRR · CHOSEN',
@@ -2348,8 +1322,159 @@ function setHeadline(idx, btn) {
   document.getElementById('lp-b-sub').innerHTML = v.sub;
   document.querySelectorAll('.hl-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  // Update the badge on button 0 to remove "CHOSEN" visual emphasis after switching
 }
 </script>
+
+<style>
+/* ── CREATIVE BRIEF STYLES ── */
+#panel-brief .brief-wrap{max-width:900px;margin:0 auto;padding:28px 20px;}
+.brief-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+@media(max-width:640px){.brief-grid{grid-template-columns:1fr;}}
+.brief-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+.brief-card.accent{border-left:3px solid var(--orange);}
+.brief-card.gold{border-left:3px solid var(--gold);}
+.brief-card.blue{border-left:3px solid var(--electric);}
+.brief-card.green{border-left:3px solid var(--green);}
+.brief-heading{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.05em;color:var(--text);margin-bottom:10px;}
+.brief-subheading{font-size:11px;font-weight:700;color:var(--orange);font-family:'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 6px;}
+.brief-subheading.gold{color:var(--gold-light);}
+.brief-subheading.blue{color:var(--electric);}
+.brief-subheading.green{color:var(--green);}
+.brief-body{font-size:12px;color:rgba(232,236,244,.6);line-height:1.7;}
+.brief-item{padding:8px 0;border-bottom:1px solid rgba(74,127,165,.08);font-size:12px;color:rgba(232,236,244,.72);line-height:1.55;}
+.brief-item:last-child{border-bottom:none;}
+.brief-item strong{color:var(--text);}
+.brief-tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+.brief-broll{background:var(--surface2);border-radius:6px;padding:10px 14px;margin-bottom:8px;font-size:12px;color:rgba(232,236,244,.7);line-height:1.6;}
+.brief-broll strong{color:var(--text);display:block;margin-bottom:2px;}
+.angle-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(74,127,165,.08);}
+.angle-row:last-child{border-bottom:none;}
+.angle-num{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--orange);line-height:1;flex-shrink:0;min-width:28px;}
+.angle-title{font-weight:700;font-size:12px;color:var(--text);margin-bottom:3px;}
+.angle-body{font-size:11px;color:rgba(232,236,244,.55);line-height:1.6;}
+</style>
+
+<!-- ══════════════════════════════════════════════════════════
+  PANEL: CREATIVE BRIEF
+══════════════════════════════════════════════════════════ -->
+<div id="panel-brief" class="panel">
+<div class="brief-wrap">
+
+  <div class="section-title">Creative Brief — June 11 Masterclass</div>
+  <div class="section-sub">Big ideas · Headline themes · B-roll concepts · Carousel angles · Open for iteration as LP testing informs final direction</div>
+
+  <!-- BIG IDEA / CORE ANGLES -->
+  <div class="card mb16">
+    <div class="tag">The 8 Big Ideas — Headline Variant Themes</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:14px;font-family:'DM Mono',monospace">Each headline variant maps to a distinct big idea and emotional entry point. Use these to match creative to audience temperature.</div>
+
+    <div class="angle-row">
+      <div class="angle-num">1</div>
+      <div>
+        <div class="angle-title">$14,800 MRR Method™ <span class="badge type-mc">CHOSEN</span></div>
+        <div class="angle-body"><strong style="color:var(--text)">Mechanism + outcome specificity.</strong> The number does the heavy lifting. Anchors the promise to a concrete, believable monthly income figure. Best for warm audiences who already respect IFCA's math. Strong for email list + retargeting. <em style="color:rgba(232,236,244,.4)">Entry emotion: desire.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">2</div>
+      <div>
+        <div class="angle-title">$146K Hidden Revenue</div>
+        <div class="angle-body"><strong style="color:var(--text)">Discovery angle.</strong> "It's already there — you're just not seeing it." High intrigue for cold traffic. Works because it's not threatening — it's an unlock, not a challenge. <em style="color:rgba(232,236,244,.4)">Entry emotion: curiosity + hope.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">3</div>
+      <div>
+        <div class="angle-title">New-Client Treadmill</div>
+        <div class="angle-body"><strong style="color:var(--text)">Pattern interrupt / villain framing.</strong> Name the hamster wheel they're already on. Great for coaches doing $10K–$30K months who feel stuck. Creates immediate identification. Contrarian energy. <em style="color:rgba(232,236,244,.4)">Entry emotion: frustration validated.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">4</div>
+      <div>
+        <div class="angle-title">MRR Method™</div>
+        <div class="angle-body"><strong style="color:var(--text)">Mechanism-led.</strong> Named system builds authority. "Method" signals there's a repeatable process — not just inspiration. Strongest with warm audiences who've already heard Jordan's content. <em style="color:rgba(232,236,244,.4)">Entry emotion: trust + desire.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">5</div>
+      <div>
+        <div class="angle-title">Your Clients Are Willing to Pay You Again</div>
+        <div class="angle-body"><strong style="color:var(--text)">Relationship reframe.</strong> Shifts perspective from "I need to find clients" to "I have clients who want to stay." Low-resistance angle. Great for coaches who hate selling. <em style="color:rgba(232,236,244,.4)">Entry emotion: relief.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">6</div>
+      <div>
+        <div class="angle-title">Alycia $30K–$40K MRR (Case Study Lead)</div>
+        <div class="angle-body"><strong style="color:var(--text)">Social proof first.</strong> Leads with the result, not the mechanism. The quote is the hook. Extremely specific ($30K–$40K, "4–6 months without signing a new client"). High-credibility for cold traffic. <em style="color:rgba(232,236,244,.4)">Entry emotion: belief.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">7</div>
+      <div>
+        <div class="angle-title">You Already Have the Clients You Need</div>
+        <div class="angle-body"><strong style="color:var(--text)">Reframe + permission.</strong> "You don't need more — you need to extract more." Deeply validating. Particularly strong for coaches who feel guilty or burnt out from chasing. <em style="color:rgba(232,236,244,.4)">Entry emotion: permission + relief.</em></div>
+      </div>
+    </div>
+    <div class="angle-row">
+      <div class="angle-num">8</div>
+      <div>
+        <div class="angle-title">Retention Revenue Engine</div>
+        <div class="angle-body"><strong style="color:var(--text)">Momentum / competitive frame.</strong> "The coaches winning right now are doing X." FOMO + authority. Works for more market-aware audiences who want to understand the system, not just the outcome. <em style="color:rgba(232,236,244,.4)">Entry emotion: urgency + competitive drive.</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B-ROLL CONCEPTS -->
+  <div class="brief-grid">
+    <div class="brief-card accent">
+      <div class="brief-heading">B-Roll Concepts</div>
+      <div class="brief-subheading">For Paid + Organic Overlays</div>
+      <div class="brief-broll"><strong>Jordan at whiteboard — LTV math</strong>Writing out: $2,500 FE + $6,900 BE × 2 clients/week = $702K. Also "40–60% back-end close rate" large. Use for data/proof overlay ads (TOF-4).</div>
+      <div class="brief-broll"><strong>Jordan walking + talking — casual B-roll</strong>Natural movement, outdoor or hallway. 2–3 min of footage. Use as background for text overlay creative across all funnel stages.</div>
+      <div class="brief-broll"><strong>Erin — selfie/home studio</strong>All three Erin scripts. Warm, casual energy. Natural light. 2 takes minimum per script at 30–45s each.</div>
+      <div class="brief-broll"><strong>Phone/screen — results scrolling</strong>GHL pipeline, Stripe notifications, Skool/Slack client wins. Use for social proof overlay B-roll. No specific numbers required.</div>
+      <div class="brief-broll"><strong>Jordan + Erin together — 15–20s</strong>Casual co-host moment. "We're doing something big June 11th." Used for IFCA page joint announcement. Short, one take.</div>
+    </div>
+
+    <div class="brief-card gold">
+      <div class="brief-heading">Carousel Hook Angles</div>
+      <div class="brief-subheading gold">For Instagram / Facebook Carousels</div>
+      <div class="brief-item"><strong>Slide 1 hook → proof cascade:</strong> Open with a specific stat or result ($96,260 · 24/26 · $702K) and let each slide deepen the proof. Final slide: event CTA.</div>
+      <div class="brief-item"><strong>"3 Types of Coaches" framework:</strong> Slide 1 = the grinder. Slide 2 = the plateaued. Slide 3 = the MRR-builder. Final slide = which one are you + event invite.</div>
+      <div class="brief-item"><strong>The Math Breakdown:</strong> Slide 1 = "What $14,800/month actually looks like." Walk through the simple math across 5–6 slides. Hook people who respond to numbers and logic.</div>
+      <div class="brief-item"><strong>"Mistakes" angle:</strong> "5 mistakes keeping you on the new-client treadmill." Problem-aware coaches love this format. Slide 6 = the solution is what we're teaching June 11.</div>
+      <div class="brief-item"><strong>Before/After structure:</strong> Split each slide — BEFORE the LTV method vs. AFTER. Use real student situations (Alycia, David, Vanessa) as the "after." CTA on final slide.</div>
+      <div class="brief-item"><strong>Quote + Proof series:</strong> Each slide = one student quote + one specific result. 5–6 slides, clean typography. End on "We're teaching the system live June 11."</div>
+    </div>
+  </div>
+
+  <!-- CORE MESSAGING / OPEN NOTES -->
+  <div class="brief-grid">
+    <div class="brief-card blue">
+      <div class="brief-heading">Core Messaging Themes</div>
+      <div class="brief-subheading blue">Consistent Across All Creative</div>
+      <div class="brief-item"><strong>The mechanism is named:</strong> LTV Retention Method™, Community Funnel™, Re-Sign Script. Always refer to these by name — they build IP equity.</div>
+      <div class="brief-item"><strong>Specificity over vagueness:</strong> $702K not "7 figures." $96,260 not "almost $100K." 24-for-26 not "almost everyone." The numbers are the proof.</div>
+      <div class="brief-item"><strong>The villain is the treadmill, not the coach:</strong> Never suggest the coach is lazy or bad. The system is broken — they just haven't had the right one.</div>
+      <div class="brief-item"><strong>Live = urgency without hype:</strong> "No replay" is a genuine constraint. Use it matter-of-factly, not as manufactured scarcity.</div>
+      <div class="brief-item"><strong>Taeler as co-host:</strong> Dual audience, dual credibility. When referencing the event, name both Jordan and Taeler — especially for cold Taeler audience ads.</div>
+    </div>
+
+    <div class="brief-card green">
+      <div class="brief-heading">Open Creative Notes</div>
+      <div class="brief-subheading green">To Finalize After LP Testing</div>
+      <div class="brief-item"><strong>LP split test results will inform final angle:</strong> Once V1 vs V6 vs V8 data comes in, the winning big idea should drive ad creative angle priority.</div>
+      <div class="brief-item"><strong>Organic reel performance:</strong> First reel from shoot (problem-awareness, no event mention) should inform which hook angle gets amplified as a paid ad before launch.</div>
+      <div class="brief-item"><strong>Taeler audience angles TBD:</strong> Once Taeler's audience profile is clearer, add one cold-traffic entity using her story/credibility as the primary hook. Different buying reason from all Jordan/Erin entities.</div>
+      <div class="brief-item"><strong>Retargeting creative:</strong> MOF/BOF creative should mirror whichever LP variant is winning. Don't retarget V1 visitors with V8 creative — match the angle to the original touchpoint.</div>
+      <div class="brief-item"><strong>This brief is open:</strong> Finalize hooks and confirm entity lineup after week-1 data. Treat this as a living document through June 8.</div>
+    </div>
+  </div>
+
+</div>
+</div><!-- /panel-brief -->
+
 </body>
 </html>
